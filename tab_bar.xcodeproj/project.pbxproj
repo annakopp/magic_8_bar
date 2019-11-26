@@ -13,6 +13,7 @@
 		959AC9E7238C9E2B00B566D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 959AC9E5238C9E2B00B566D5 /* Main.storyboard */; };
 		959AC9F3238C9E2C00B566D5 /* tab_barTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9F2238C9E2C00B566D5 /* tab_barTests.swift */; };
 		959AC9FE238C9E2C00B566D5 /* tab_barUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9FD238C9E2C00B566D5 /* tab_barUITests.swift */; };
+		959ACA0C238CAE5700B566D5 /* TouchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959ACA0B238CAE5700B566D5 /* TouchBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		959AC9F9238C9E2C00B566D5 /* tab_barUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tab_barUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9FD238C9E2C00B566D5 /* tab_barUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_barUITests.swift; sourceTree = "<group>"; };
 		959AC9FF238C9E2C00B566D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959ACA0B238CAE5700B566D5 /* TouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				959AC9E5238C9E2B00B566D5 /* Main.storyboard */,
 				959AC9E8238C9E2B00B566D5 /* Info.plist */,
 				959AC9E9238C9E2B00B566D5 /* tab_bar.entitlements */,
+				959ACA0B238CAE5700B566D5 /* TouchBarController.swift */,
 			);
 			path = tab_bar;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				959AC9E2238C9E2A00B566D5 /* ViewController.swift in Sources */,
+				959ACA0C238CAE5700B566D5 /* TouchBarController.swift in Sources */,
 				959AC9E0238C9E2A00B566D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

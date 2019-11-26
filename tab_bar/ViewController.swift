@@ -21,7 +21,18 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
 
-
+    
+//    func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
+//        switch identifier {
+//        case NSTouchBarItem.Identifier.:
+//          let customViewItem = NSCustomTouchBarItem(identifier: identifier)
+//          customViewItem.view = NSTextField(labelWithString: "\u{1F30E} \u{1F4D3}")
+//          return customViewItem
+//        default:
+//          return nil
+//        }
+//    }
 }
 
