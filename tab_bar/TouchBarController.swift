@@ -61,32 +61,32 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
 
             
             //let buttonView = NSButton(title: "Test", target: nil, action: nil)
-            let sliderView = NSSlider(target: self, action: #selector(shake))
+            let sliderView = NSSlider()
+            sliderView.translatesAutoresizingMaskIntoConstraints = false
             
-      
             theView.translatesAutoresizingMaskIntoConstraints = false
      
             let messageText = NSTextField(labelWithString: self.message)
-                   messageText.translatesAutoresizingMaskIntoConstraints = false
+            messageText.translatesAutoresizingMaskIntoConstraints = false
            theView.addSubview(messageText)
+            theView.addSubview(sliderView)
        
             let centerY = messageText.centerYAnchor.constraint(equalTo: theView.centerYAnchor)
             let centerX = messageText.centerXAnchor.constraint(equalTo: theView.centerXAnchor)
+            
+            sliderView.widthAnchor.constraint(equalTo: theView.widthAnchor).isActive = true
+            let sliderCell = SecretSliderCell()
+            sliderCell.target = self
+            sliderCell.action = #selector(shake)
+
+            sliderCell.maxValue = 0.5
+            sliderView.cell = sliderCell
+            
  
         
             NSLayoutConstraint.activate([
                 centerY, centerX
             ])
-    
-
-//            theView.addSubview(sliderView)
-            
-//            let c2 = NSLayoutConstraint(item: messageText, attribute: .leading, relatedBy: .equal, toItem: theView, attribute: .leading, multiplier: 1.0, constant: 0)
-//            let c3 = NSLayoutConstraint(item: messageText, attribute: .trailing, relatedBy: .equal, toItem: theView, attribute: .trailing, multiplier: 1.0, constant: 0)
-//            let c4 = NSLayoutConstraint(item: messageText, attribute: .top, relatedBy: .equal, toItem: theView, attribute: .top, multiplier: 1.0, constant: 0)
-//            let c5 = NSLayoutConstraint(item: messageText, attribute: .bottom, relatedBy: .equal, toItem: theView, attribute: .bottom, multiplier: 1.0, constant: 0)
-//
-//            theView.addConstraints([c1, c2, c3, c4, c5])
             
             theView.addConstraints([c1])
             

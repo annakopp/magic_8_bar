@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9595ECB9238DE20800E99596 /* SecretSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595ECB8238DE20800E99596 /* SecretSliderCell.swift */; };
 		959AC9E0238C9E2A00B566D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */; };
 		959AC9E2238C9E2A00B566D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9E1238C9E2A00B566D5 /* ViewController.swift */; };
 		959AC9E4238C9E2B00B566D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AC9E3238C9E2B00B566D5 /* Assets.xcassets */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9595ECB8238DE20800E99596 /* SecretSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretSliderCell.swift; sourceTree = "<group>"; };
 		959AC9DC238C9E2A00B566D5 /* tab_bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tab_bar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959AC9E1238C9E2A00B566D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				959AC9E8238C9E2B00B566D5 /* Info.plist */,
 				959AC9E9238C9E2B00B566D5 /* tab_bar.entitlements */,
 				959ACA0B238CAE5700B566D5 /* TouchBarController.swift */,
+				9595ECB8238DE20800E99596 /* SecretSliderCell.swift */,
 			);
 			path = tab_bar;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				959AC9E2238C9E2A00B566D5 /* ViewController.swift in Sources */,
 				959ACA0C238CAE5700B566D5 /* TouchBarController.swift in Sources */,
+				9595ECB9238DE20800E99596 /* SecretSliderCell.swift in Sources */,
 				959AC9E0238C9E2A00B566D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
