@@ -17,8 +17,8 @@ class SecretSliderCell: NSSliderCell {
         active.fill()
     }
     
-    override func drawKnob(_ knobRect: NSRect) {
-        
-    }
+//    override func drawKnob(_ knobRect: NSRect) {
+//        
+//    }
 
 }

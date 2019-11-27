@@ -29,7 +29,7 @@ enum Answers: String, CaseIterable {
     case ItIsDecidedlySo = "It is decidedly so."
     case WithoutADoubt = "Wirhour a doubt."
     case YesDefinitely = "Yes Definitely."
-    case YouMayRelyOnIt =  "You may reply on it."
+    case YouMayRelyOnIt =  "You may rely on it."
     case AsISeeItYes = "As I see it, yes."
     case MostLikely = "Most likley."
     case OutlookGood = "Outlook good."
@@ -50,6 +50,7 @@ enum Answers: String, CaseIterable {
 
 class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDelegate {
     let theView = NSView()
+    let sliderView = NSSlider()
     let message = BehaviorRelay<String>(value: "SWIPE LEFT/RIGHT")
     override func windowDidLoad() {
            super.windowDidLoad()
@@ -71,6 +72,26 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
         self.message.accept(Answers.allCases.randomElement()!.rawValue)
     }
     
+    func startListeningToSlider() {
+        sliderView.rx.value.observeOn(MainScheduler.instance).scan(0, accumulator: { (accum, next) -> Double in
+             let total = accum + next
+             return total
+         }).takeWhile { (total) -> Bool in
+             return total < 8
+        }.subscribe(onNext: {total in
+            //TODO: animate text erase based on total
+            print(total)
+        },onCompleted: {
+            print("done?")
+            //TODO: animate text appear
+            self.message.accept(Answers.allCases.randomElement()!.rawValue)
+        }, onDisposed: {
+            print("disposed?")
+            self.startListeningToSlider()
+        })
+             
+    }
+    
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
         let customViewItem = NSCustomTouchBarItem(identifier: identifier)
         switch identifier {
@@ -82,11 +103,6 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
 
             
             let c1 = NSLayoutConstraint(item: theView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: Constants.touchBarWidth)
-        
-
-            
-            //let buttonView = NSButton(title: "Test", target: nil, action: nil)
-            let sliderView = NSSlider()
 
             
             sliderView.translatesAutoresizingMaskIntoConstraints = false
@@ -95,12 +111,12 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
      
             let messageText = NSTextField(labelWithString: "")
             
-            let disposeBag = DisposeBag()
-
-            self.message.observeOn(MainScheduler.instance).subscribe { (event) in
+            
+            _ = self.message.observeOn(MainScheduler.instance).subscribe { (event) in
                 guard let msg: String = event.element else { return }
-                messageText.stringValue = msg
-            }.disposed(by: disposeBag)
+                messageText.stringValue = msg.uppercased()
+            }
+
             
             messageText.translatesAutoresizingMaskIntoConstraints = false
            theView.addSubview(messageText)
@@ -112,10 +128,24 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
             sliderView.widthAnchor.constraint(equalTo: theView.widthAnchor).isActive = true
             let sliderCell = SecretSliderCell()
             sliderCell.target = self
-            sliderCell.action = #selector(shake)
+            sliderCell.minValue = -1
+            sliderCell.maxValue = 1
             sliderView.cell = sliderCell
             
-        
+//            sliderView.rx.value.observeOn(MainScheduler.instance).subscribe { (event) in
+//                guard let val = event.element else { return }
+//                print(val)
+//                self.message.accept(Answers.allCases.randomElement()!.rawValue)
+//            }
+//
+ 
+//                .subscribe { (event) in
+//                if let total = event.element, total > 4 {
+//                    self.message.accept(Answers.allCases.randomElement()!.rawValue)
+//                }
+//            }
+            startListeningToSlider()
+
             NSLayoutConstraint.activate([
                 centerY, centerX
             ])
