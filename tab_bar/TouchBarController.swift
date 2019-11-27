@@ -7,6 +7,8 @@
 //
 
 import Cocoa
+import RxSwift
+import RxCocoa
 
 fileprivate extension NSTouchBar.CustomizationIdentifier {
     
@@ -22,10 +24,33 @@ struct Constants {
     static let backgroundColor = NSColor(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1)
 }
 
+enum Answers: String, CaseIterable {
+    case ItIsCertain = "It is certain."
+    case ItIsDecidedlySo = "It is decidedly so."
+    case WithoutADoubt = "Wirhour a doubt."
+    case YesDefinitely = "Yes Definitely."
+    case YouMayRelyOnIt =  "You may reply on it."
+    case AsISeeItYes = "As I see it, yes."
+    case MostLikely = "Most likley."
+    case OutlookGood = "Outlook good."
+    case Yes = "Yes."
+    case SignsPointToYes = "Signs point to yes."
+    case ReplyHazyTryAgain = "Reply hazy try again."
+    case AskAgainLater =  "Ask again later."
+    case BetterNotTellYouNow = "Better not tell you now."
+    case CannotPredictNow =  "Cannot predict now."
+    case ConcentrateAndAskAgain = "Concenrtate and ask again."
+    case DontCountOnIt = "Don't count on it."
+    case MyReplyIsNo =  "My reply is no."
+    case MySourcesSayNo = "My sources say no."
+    case OutlookNotSoGood = "Outlook not so good."
+    case VeryDoubtful = "Very doubtful."
+}
+
 
 class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDelegate {
-     let theView = NSView()
-    var message = "SWIPE LEFT/RIGHT"
+    let theView = NSView()
+    let message = BehaviorRelay<String>(value: "SWIPE LEFT/RIGHT")
     override func windowDidLoad() {
            super.windowDidLoad()
         
@@ -43,7 +68,7 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
     
     @objc func shake(sender: NSSlider) {
         print(sender.floatValue)
-        self.message = "YES"
+        self.message.accept(Answers.allCases.randomElement()!.rawValue)
     }
     
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
@@ -62,11 +87,21 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
             
             //let buttonView = NSButton(title: "Test", target: nil, action: nil)
             let sliderView = NSSlider()
+
+            
             sliderView.translatesAutoresizingMaskIntoConstraints = false
             
             theView.translatesAutoresizingMaskIntoConstraints = false
      
-            let messageText = NSTextField(labelWithString: self.message)
+            let messageText = NSTextField(labelWithString: "")
+            
+            let disposeBag = DisposeBag()
+
+            self.message.observeOn(MainScheduler.instance).subscribe { (event) in
+                guard let msg: String = event.element else { return }
+                messageText.stringValue = msg
+            }.disposed(by: disposeBag)
+            
             messageText.translatesAutoresizingMaskIntoConstraints = false
            theView.addSubview(messageText)
             theView.addSubview(sliderView)
@@ -78,11 +113,8 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
             let sliderCell = SecretSliderCell()
             sliderCell.target = self
             sliderCell.action = #selector(shake)
-
-            sliderCell.maxValue = 0.5
             sliderView.cell = sliderCell
             
- 
         
             NSLayoutConstraint.activate([
                 centerY, centerX

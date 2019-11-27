@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9595ECB9238DE20800E99596 /* SecretSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595ECB8238DE20800E99596 /* SecretSliderCell.swift */; };
+		9595ECF9238DF76D00E99596 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595ECE8238DF72400E99596 /* RxCocoa.framework */; };
+		9595ECFA238DF76D00E99596 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595ECE6238DF72400E99596 /* RxSwift.framework */; };
 		959AC9E0238C9E2A00B566D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */; };
 		959AC9E2238C9E2A00B566D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9E1238C9E2A00B566D5 /* ViewController.swift */; };
 		959AC9E4238C9E2B00B566D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AC9E3238C9E2B00B566D5 /* Assets.xcassets */; };
@@ -18,6 +20,76 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9595ECE5238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8A56AD71AD7424700B4673B;
+			remoteInfo = RxSwift;
+		};
+		9595ECE7238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C809396D1B8A71760088E94D;
+			remoteInfo = RxCocoa;
+		};
+		9595ECE9238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A2897D53225CA1E7004EA481;
+			remoteInfo = RxRelay;
+		};
+		9595ECEB238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8093BC71B8A71F00088E94D;
+			remoteInfo = RxBlocking;
+		};
+		9595ECED238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C88FA50C1C25C44800CCFEA4;
+			remoteInfo = RxTest;
+		};
+		9595ECEF238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C83508C31C386F6F0027C24C;
+			remoteInfo = "AllTests-iOS";
+		};
+		9595ECF1238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C83509841C38740E0027C24C;
+			remoteInfo = "AllTests-tvOS";
+		};
+		9595ECF3238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C83509941C38742C0027C24C;
+			remoteInfo = "AllTests-macOS";
+		};
+		9595ECF5238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C85BA04B1C3878740075D68E;
+			remoteInfo = Microoptimizations;
+		};
+		9595ECF7238DF72400E99596 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C8E8BA551E2C181A00A4AC2C;
+			remoteInfo = Benchmarks;
+		};
 		959AC9EF238C9E2C00B566D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 959AC9D4238C9E2A00B566D5 /* Project object */;
@@ -36,6 +108,18 @@
 
 /* Begin PBXFileReference section */
 		9595ECB8238DE20800E99596 /* SecretSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretSliderCell.swift; sourceTree = "<group>"; };
+		9595ECBB238DF12C00E99596 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
+		9595ECBC238DF12C00E99596 /* RxRelay.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxRelay.framework.dSYM; path = Carthage/Build/Mac/RxRelay.framework.dSYM; sourceTree = "<group>"; };
+		9595ECBD238DF12C00E99596 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/Mac/RxRelay.framework; sourceTree = "<group>"; };
+		9595ECBE238DF12C00E99596 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/Mac/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
+		9595ECBF238DF12C00E99596 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
+		9595ECC0238DF12C00E99596 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/Mac/RxBlocking.framework.dSYM; sourceTree = "<group>"; };
+		9595ECC1238DF12C00E99596 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
+		9595ECC2238DF12C00E99596 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
+		9595ECC3238DF12C00E99596 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
+		9595ECC4238DF12C00E99596 /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxTest.framework.dSYM; path = Carthage/Build/Mac/RxTest.framework.dSYM; sourceTree = "<group>"; };
+		9595ECD0238DF18D00E99596 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		9595ECD8238DF72300E99596 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
 		959AC9DC238C9E2A00B566D5 /* tab_bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tab_bar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959AC9E1238C9E2A00B566D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -57,6 +141,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9595ECF9238DF76D00E99596 /* RxCocoa.framework in Frameworks */,
+				9595ECFA238DF76D00E99596 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +163,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9595ECBA238DF12B00E99596 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9595ECD8238DF72300E99596 /* Rx.xcodeproj */,
+				9595ECD0238DF18D00E99596 /* RxCocoa.framework */,
+				9595ECC2238DF12C00E99596 /* RxBlocking.framework */,
+				9595ECC0238DF12C00E99596 /* RxBlocking.framework.dSYM */,
+				9595ECBB238DF12C00E99596 /* RxCocoa.framework */,
+				9595ECBE238DF12C00E99596 /* RxCocoa.framework.dSYM */,
+				9595ECBD238DF12C00E99596 /* RxRelay.framework */,
+				9595ECBC238DF12C00E99596 /* RxRelay.framework.dSYM */,
+				9595ECBF238DF12C00E99596 /* RxSwift.framework */,
+				9595ECC1238DF12C00E99596 /* RxSwift.framework.dSYM */,
+				9595ECC3238DF12C00E99596 /* RxTest.framework */,
+				9595ECC4238DF12C00E99596 /* RxTest.framework.dSYM */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9595ECD9238DF72300E99596 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9595ECE6238DF72400E99596 /* RxSwift.framework */,
+				9595ECE8238DF72400E99596 /* RxCocoa.framework */,
+				9595ECEA238DF72400E99596 /* RxRelay.framework */,
+				9595ECEC238DF72400E99596 /* RxBlocking.framework */,
+				9595ECEE238DF72400E99596 /* RxTest.framework */,
+				9595ECF0238DF72400E99596 /* AllTests-iOS.xctest */,
+				9595ECF2238DF72400E99596 /* AllTests-tvOS.xctest */,
+				9595ECF4238DF72400E99596 /* AllTests-macOS.xctest */,
+				9595ECF6238DF72400E99596 /* PerformanceTests.app */,
+				9595ECF8238DF72400E99596 /* Benchmarks.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		959AC9D3238C9E2A00B566D5 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +206,7 @@
 				959AC9F1238C9E2C00B566D5 /* tab_barTests */,
 				959AC9FC238C9E2C00B566D5 /* tab_barUITests */,
 				959AC9DD238C9E2A00B566D5 /* Products */,
+				9595ECBA238DF12B00E99596 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -220,6 +343,12 @@
 			mainGroup = 959AC9D3238C9E2A00B566D5;
 			productRefGroup = 959AC9DD238C9E2A00B566D5 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9595ECD9238DF72300E99596 /* Products */;
+					ProjectRef = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				959AC9DB238C9E2A00B566D5 /* tab_bar */,
@@ -228,6 +357,80 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		9595ECE6238DF72400E99596 /* RxSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxSwift.framework;
+			remoteRef = 9595ECE5238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECE8238DF72400E99596 /* RxCocoa.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxCocoa.framework;
+			remoteRef = 9595ECE7238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECEA238DF72400E99596 /* RxRelay.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxRelay.framework;
+			remoteRef = 9595ECE9238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECEC238DF72400E99596 /* RxBlocking.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxBlocking.framework;
+			remoteRef = 9595ECEB238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECEE238DF72400E99596 /* RxTest.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = RxTest.framework;
+			remoteRef = 9595ECED238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECF0238DF72400E99596 /* AllTests-iOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AllTests-iOS.xctest";
+			remoteRef = 9595ECEF238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECF2238DF72400E99596 /* AllTests-tvOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AllTests-tvOS.xctest";
+			remoteRef = 9595ECF1238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECF4238DF72400E99596 /* AllTests-macOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "AllTests-macOS.xctest";
+			remoteRef = 9595ECF3238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECF6238DF72400E99596 /* PerformanceTests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			name = PerformanceTests.app;
+			path = Microoptimizations.app;
+			remoteRef = 9595ECF5238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9595ECF8238DF72400E99596 /* Benchmarks.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = Benchmarks.xctest;
+			remoteRef = 9595ECF7238DF72400E99596 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		959AC9DA238C9E2A00B566D5 /* Resources */ = {
@@ -367,6 +570,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -420,6 +624,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -430,6 +635,11 @@
 				CODE_SIGN_ENTITLEMENTS = tab_bar/tab_bar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tab_bar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -448,6 +658,11 @@
 				CODE_SIGN_ENTITLEMENTS = tab_bar/tab_bar.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = tab_bar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
