@@ -51,11 +51,11 @@ enum Answers: String, CaseIterable {
 class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDelegate {
     let theView = NSView()
     let sliderView = NSSlider()
-    let messageText = NSTextField(labelWithString: "")
+    let messageTextView = NSTextField(labelWithString: "")
     let message = BehaviorRelay<String>(value: "🎱 SWIPE LEFT <-> RIGHT TO SHAKE")
+    
     override func windowDidLoad() {
-           super.windowDidLoad()
-        
+        super.windowDidLoad()
     }
 
     override func makeTouchBar() -> NSTouchBar? {
@@ -80,75 +80,67 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
          }).takeWhile { (total) -> Bool in
              return total < 8
         }.subscribe(onNext: {total in
-            self.messageText.alphaValue = CGFloat((1 - total/8))
-            print(CGFloat((1 - total/8)))
-            print(total)
+            self.messageTextView.alphaValue = CGFloat((1 - total/8))
         },onCompleted: {
             print("done?")
         }, onDisposed: {
             print("disposed?")
             NSAnimationContext.runAnimationGroup({ (context) in
                 context.duration = 1.0
-                self.messageText.animator().alphaValue = 1
+                self.messageTextView.animator().alphaValue = 1
                 self.message.accept("🎱")
             }) {
                 self.message.accept(Answers.allCases.randomElement()!.rawValue)
-                self.messageText.animator().alphaValue = 1
+                self.messageTextView.animator().alphaValue = 1
                 self.startListeningToSlider()
             }
-            
         })
-             
+    }
+    
+    fileprivate func setUpSliderCell() {
+        let sliderCell = SecretSliderCell()
+        sliderCell.target = self
+        sliderCell.minValue = -1
+        sliderCell.maxValue = 1
+        sliderView.cell = sliderCell
+    }
+    
+    func setUpViews() {
+        sliderView.translatesAutoresizingMaskIntoConstraints = false
+        theView.translatesAutoresizingMaskIntoConstraints = false
+        messageTextView.translatesAutoresizingMaskIntoConstraints = false
+        
+        theView.addSubview(messageTextView)
+        theView.addSubview(sliderView)
+        
+        let c1 = NSLayoutConstraint(item: theView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: Constants.touchBarWidth)
+
+        let centerY = messageTextView.centerYAnchor.constraint(equalTo: theView.centerYAnchor)
+        let centerX = messageTextView.centerXAnchor.constraint(equalTo: theView.centerXAnchor)
+               
+        sliderView.widthAnchor.constraint(equalTo: theView.widthAnchor).isActive = true
+        
+        NSLayoutConstraint.activate([
+             centerY, centerX
+         ])
+         
+        theView.addConstraints([c1])
+    
+        setUpSliderCell()
     }
     
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
         let customViewItem = NSCustomTouchBarItem(identifier: identifier)
         switch identifier {
         case .colorTestBarItem:
-            // let thing = CAShapeLayer()
-            // thing.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
-            //let frame = CGRect(origin: .zero, size: CGSize(width: 100, height: 1))
-            //self.theView.frame = frame
-
+            setUpViews()
             
-            let c1 = NSLayoutConstraint(item: theView, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1.0, constant: Constants.touchBarWidth)
-
-            
-            sliderView.translatesAutoresizingMaskIntoConstraints = false
-            
-            theView.translatesAutoresizingMaskIntoConstraints = false
-     
-           
-            
-            
-            _ = self.message.observeOn(MainScheduler.instance).subscribe { (event) in
+            self.message.observeOn(MainScheduler.instance).subscribe { (event) in
                 guard let msg: String = event.element else { return }
-                self.messageText.stringValue = msg.uppercased()
+                self.messageTextView.stringValue = msg.uppercased()
             }
-
-            
-            messageText.translatesAutoresizingMaskIntoConstraints = false
-           theView.addSubview(messageText)
-            theView.addSubview(sliderView)
-       
-            let centerY = messageText.centerYAnchor.constraint(equalTo: theView.centerYAnchor)
-            let centerX = messageText.centerXAnchor.constraint(equalTo: theView.centerXAnchor)
-            
-            sliderView.widthAnchor.constraint(equalTo: theView.widthAnchor).isActive = true
-            let sliderCell = SecretSliderCell()
-            sliderCell.target = self
-            sliderCell.minValue = -1
-            sliderCell.maxValue = 1
-            sliderView.cell = sliderCell
             
             startListeningToSlider()
-
-            NSLayoutConstraint.activate([
-                centerY, centerX
-            ])
-            
-            theView.addConstraints([c1])
-         
             
             self.theView.wantsLayer = true
             self.theView.layer?.backgroundColor = NSColor.blue.cgColor
