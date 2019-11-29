@@ -202,7 +202,7 @@
 		959AC9D3238C9E2A00B566D5 = {
 			isa = PBXGroup;
 			children = (
-				959AC9DE238C9E2A00B566D5 /* tab_bar */,
+				959AC9DE238C9E2A00B566D5 /* magic_touch_8 */,
 				959AC9F1238C9E2C00B566D5 /* tab_barTests */,
 				959AC9FC238C9E2C00B566D5 /* tab_barUITests */,
 				959AC9DD238C9E2A00B566D5 /* Products */,
@@ -220,7 +220,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		959AC9DE238C9E2A00B566D5 /* tab_bar */ = {
+		959AC9DE238C9E2A00B566D5 /* magic_touch_8 */ = {
 			isa = PBXGroup;
 			children = (
 				959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */,
@@ -232,7 +232,7 @@
 				959ACA0B238CAE5700B566D5 /* TouchBarController.swift */,
 				9595ECB8238DE20800E99596 /* SecretSliderCell.swift */,
 			);
-			path = tab_bar;
+			path = magic_touch_8;
 			sourceTree = "<group>";
 		};
 		959AC9F1238C9E2C00B566D5 /* tab_barTests */ = {
