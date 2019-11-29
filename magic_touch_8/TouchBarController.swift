@@ -12,16 +12,15 @@ import RxCocoa
 
 fileprivate extension NSTouchBar.CustomizationIdentifier {
     
-    static let helloWorldBar = NSTouchBar.CustomizationIdentifier("helloWorldBar")
+    static let magicTouchBar = NSTouchBar.CustomizationIdentifier("magicTouchBar")
 }
 
 fileprivate extension NSTouchBarItem.Identifier {
-    static let colorTestBarItem = NSTouchBarItem.Identifier("colorTestBarItem")
+    static let magicTouchBarItem = NSTouchBarItem.Identifier("magicTouchBarItem")
 }
 
 struct Constants {
     static let touchBarWidth:CGFloat = 700.0
-    static let backgroundColor = NSColor(red: 247/255.0, green: 247/255.0, blue: 247/255.0, alpha: 1)
 }
 
 enum Answers: String, CaseIterable {
@@ -62,18 +61,13 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
         let touchBar = NSTouchBar()
         touchBar.delegate = self
         touchBar.customizationIdentifier =
-            .helloWorldBar
-        touchBar.defaultItemIdentifiers = [.colorTestBarItem]
+            .magicTouchBar
+        touchBar.defaultItemIdentifiers = [.magicTouchBarItem]
 
         return touchBar
     }
     
-    @objc func shake(sender: NSSlider) {
-        print(sender.floatValue)
-        self.message.accept(Answers.allCases.randomElement()!.rawValue)
-    }
-    
-    func startListeningToSlider() {
+    fileprivate func startListeningToSlider() {
         sliderView.rx.value.observeOn(MainScheduler.instance).scan(0, accumulator: { (accum, next) -> Double in
              let total = accum + next
              return total
@@ -105,7 +99,7 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
         sliderView.cell = sliderCell
     }
     
-    func setUpViews() {
+    fileprivate func setUpViews() {
         sliderView.translatesAutoresizingMaskIntoConstraints = false
         theView.translatesAutoresizingMaskIntoConstraints = false
         messageTextView.translatesAutoresizingMaskIntoConstraints = false
@@ -132,7 +126,7 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
     func touchBar(_ touchBar: NSTouchBar, makeItemForIdentifier identifier: NSTouchBarItem.Identifier) -> NSTouchBarItem? {
         let customViewItem = NSCustomTouchBarItem(identifier: identifier)
         switch identifier {
-        case .colorTestBarItem:
+        case .magicTouchBarItem:
             setUpViews()
             
             self.message.observeOn(MainScheduler.instance).subscribe { (event) in
