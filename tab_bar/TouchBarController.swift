@@ -27,8 +27,8 @@ struct Constants {
 enum Answers: String, CaseIterable {
     case ItIsCertain = "It is certain."
     case ItIsDecidedlySo = "It is decidedly so."
-    case WithoutADoubt = "Wirhour a doubt."
-    case YesDefinitely = "Yes Definitely."
+    case WithoutADoubt = "Without a doubt."
+    case YesDefinitely = "Yes, definitely."
     case YouMayRelyOnIt =  "You may rely on it."
     case AsISeeItYes = "As I see it, yes."
     case MostLikely = "Most likley."
@@ -39,7 +39,7 @@ enum Answers: String, CaseIterable {
     case AskAgainLater =  "Ask again later."
     case BetterNotTellYouNow = "Better not tell you now."
     case CannotPredictNow =  "Cannot predict now."
-    case ConcentrateAndAskAgain = "Concenrtate and ask again."
+    case ConcentrateAndAskAgain = "Concentrate and ask again."
     case DontCountOnIt = "Don't count on it."
     case MyReplyIsNo =  "My reply is no."
     case MySourcesSayNo = "My sources say no."
@@ -51,7 +51,8 @@ enum Answers: String, CaseIterable {
 class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDelegate {
     let theView = NSView()
     let sliderView = NSSlider()
-    let message = BehaviorRelay<String>(value: "SWIPE LEFT/RIGHT")
+    let messageText = NSTextField(labelWithString: "")
+    let message = BehaviorRelay<String>(value: "🎱 SWIPE LEFT <-> RIGHT TO SHAKE")
     override func windowDidLoad() {
            super.windowDidLoad()
         
@@ -79,15 +80,23 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
          }).takeWhile { (total) -> Bool in
              return total < 8
         }.subscribe(onNext: {total in
-            //TODO: animate text erase based on total
+            self.messageText.alphaValue = CGFloat((1 - total/8))
+            print(CGFloat((1 - total/8)))
             print(total)
         },onCompleted: {
             print("done?")
-            //TODO: animate text appear
-            self.message.accept(Answers.allCases.randomElement()!.rawValue)
         }, onDisposed: {
             print("disposed?")
-            self.startListeningToSlider()
+            NSAnimationContext.runAnimationGroup({ (context) in
+                context.duration = 1.0
+                self.messageText.animator().alphaValue = 1
+                self.message.accept("🎱")
+            }) {
+                self.message.accept(Answers.allCases.randomElement()!.rawValue)
+                self.messageText.animator().alphaValue = 1
+                self.startListeningToSlider()
+            }
+            
         })
              
     }
@@ -109,12 +118,12 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
             
             theView.translatesAutoresizingMaskIntoConstraints = false
      
-            let messageText = NSTextField(labelWithString: "")
+           
             
             
             _ = self.message.observeOn(MainScheduler.instance).subscribe { (event) in
                 guard let msg: String = event.element else { return }
-                messageText.stringValue = msg.uppercased()
+                self.messageText.stringValue = msg.uppercased()
             }
 
             
@@ -132,18 +141,6 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
             sliderCell.maxValue = 1
             sliderView.cell = sliderCell
             
-//            sliderView.rx.value.observeOn(MainScheduler.instance).subscribe { (event) in
-//                guard let val = event.element else { return }
-//                print(val)
-//                self.message.accept(Answers.allCases.randomElement()!.rawValue)
-//            }
-//
- 
-//                .subscribe { (event) in
-//                if let total = event.element, total > 4 {
-//                    self.message.accept(Answers.allCases.randomElement()!.rawValue)
-//                }
-//            }
             startListeningToSlider()
 
             NSLayoutConstraint.activate([
@@ -151,6 +148,7 @@ class TouchBarController: NSWindowController, NSTouchBarDelegate, CAAnimationDel
             ])
             
             theView.addConstraints([c1])
+         
             
             self.theView.wantsLayer = true
             self.theView.layer?.backgroundColor = NSColor.blue.cgColor
