@@ -120,17 +120,17 @@
 		9595ECC4238DF12C00E99596 /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxTest.framework.dSYM; path = Carthage/Build/Mac/RxTest.framework.dSYM; sourceTree = "<group>"; };
 		9595ECD0238DF18D00E99596 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		9595ECD8238DF72300E99596 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
-		959AC9DC238C9E2A00B566D5 /* tab_bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tab_bar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AC9DC238C9E2A00B566D5 /* MagicTouch8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTouch8.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959AC9E1238C9E2A00B566D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		959AC9E3238C9E2B00B566D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		959AC9E6238C9E2B00B566D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		959AC9E8238C9E2B00B566D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959AC9E9238C9E2B00B566D5 /* tab_bar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tab_bar.entitlements; sourceTree = "<group>"; };
-		959AC9EE238C9E2C00B566D5 /* tab_barTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tab_barTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AC9EE238C9E2C00B566D5 /* MagicTouch8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicTouch8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9F2238C9E2C00B566D5 /* tab_barTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_barTests.swift; sourceTree = "<group>"; };
 		959AC9F4238C9E2C00B566D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		959AC9F9238C9E2C00B566D5 /* tab_barUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tab_barUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AC9F9238C9E2C00B566D5 /* MagicTouch8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicTouch8UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9FD238C9E2C00B566D5 /* tab_barUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_barUITests.swift; sourceTree = "<group>"; };
 		959AC9FF238C9E2C00B566D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959ACA0B238CAE5700B566D5 /* TouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarController.swift; sourceTree = "<group>"; };
@@ -213,9 +213,9 @@
 		959AC9DD238C9E2A00B566D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				959AC9DC238C9E2A00B566D5 /* tab_bar.app */,
-				959AC9EE238C9E2C00B566D5 /* tab_barTests.xctest */,
-				959AC9F9238C9E2C00B566D5 /* tab_barUITests.xctest */,
+				959AC9DC238C9E2A00B566D5 /* MagicTouch8.app */,
+				959AC9EE238C9E2C00B566D5 /* MagicTouch8Tests.xctest */,
+				959AC9F9238C9E2C00B566D5 /* MagicTouch8UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -256,9 +256,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		959AC9DB238C9E2A00B566D5 /* tab_bar */ = {
+		959AC9DB238C9E2A00B566D5 /* MagicTouch8 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "tab_bar" */;
+			buildConfigurationList = 959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8" */;
 			buildPhases = (
 				959AC9D8238C9E2A00B566D5 /* Sources */,
 				959AC9D9238C9E2A00B566D5 /* Frameworks */,
@@ -268,14 +268,14 @@
 			);
 			dependencies = (
 			);
-			name = tab_bar;
+			name = MagicTouch8;
 			productName = tab_bar;
-			productReference = 959AC9DC238C9E2A00B566D5 /* tab_bar.app */;
+			productReference = 959AC9DC238C9E2A00B566D5 /* MagicTouch8.app */;
 			productType = "com.apple.product-type.application";
 		};
-		959AC9ED238C9E2C00B566D5 /* tab_barTests */ = {
+		959AC9ED238C9E2C00B566D5 /* MagicTouch8Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "tab_barTests" */;
+			buildConfigurationList = 959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8Tests" */;
 			buildPhases = (
 				959AC9EA238C9E2C00B566D5 /* Sources */,
 				959AC9EB238C9E2C00B566D5 /* Frameworks */,
@@ -286,14 +286,14 @@
 			dependencies = (
 				959AC9F0238C9E2C00B566D5 /* PBXTargetDependency */,
 			);
-			name = tab_barTests;
+			name = MagicTouch8Tests;
 			productName = tab_barTests;
-			productReference = 959AC9EE238C9E2C00B566D5 /* tab_barTests.xctest */;
+			productReference = 959AC9EE238C9E2C00B566D5 /* MagicTouch8Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		959AC9F8238C9E2C00B566D5 /* tab_barUITests */ = {
+		959AC9F8238C9E2C00B566D5 /* MagicTouch8UITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "tab_barUITests" */;
+			buildConfigurationList = 959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8UITests" */;
 			buildPhases = (
 				959AC9F5238C9E2C00B566D5 /* Sources */,
 				959AC9F6238C9E2C00B566D5 /* Frameworks */,
@@ -304,9 +304,9 @@
 			dependencies = (
 				959AC9FB238C9E2C00B566D5 /* PBXTargetDependency */,
 			);
-			name = tab_barUITests;
+			name = MagicTouch8UITests;
 			productName = tab_barUITests;
-			productReference = 959AC9F9238C9E2C00B566D5 /* tab_barUITests.xctest */;
+			productReference = 959AC9F9238C9E2C00B566D5 /* MagicTouch8UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -332,7 +332,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "tab_bar" */;
+			buildConfigurationList = 959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "MagicTouch8" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -351,9 +351,9 @@
 			);
 			projectRoot = "";
 			targets = (
-				959AC9DB238C9E2A00B566D5 /* tab_bar */,
-				959AC9ED238C9E2C00B566D5 /* tab_barTests */,
-				959AC9F8238C9E2C00B566D5 /* tab_barUITests */,
+				959AC9DB238C9E2A00B566D5 /* MagicTouch8 */,
+				959AC9ED238C9E2C00B566D5 /* MagicTouch8Tests */,
+				959AC9F8238C9E2C00B566D5 /* MagicTouch8UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -491,12 +491,12 @@
 /* Begin PBXTargetDependency section */
 		959AC9F0238C9E2C00B566D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 959AC9DB238C9E2A00B566D5 /* tab_bar */;
+			target = 959AC9DB238C9E2A00B566D5 /* MagicTouch8 */;
 			targetProxy = 959AC9EF238C9E2C00B566D5 /* PBXContainerItemProxy */;
 		};
 		959AC9FB238C9E2C00B566D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 959AC9DB238C9E2A00B566D5 /* tab_bar */;
+			target = 959AC9DB238C9E2A00B566D5 /* MagicTouch8 */;
 			targetProxy = 959AC9FA238C9E2C00B566D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -691,7 +691,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.tab-barTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tab_bar.app/Contents/MacOS/tab_bar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicTouch8.app/Contents/MacOS/MagicTouch8";
 			};
 			name = Debug;
 		};
@@ -712,7 +712,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.tab-barTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tab_bar.app/Contents/MacOS/tab_bar";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicTouch8.app/Contents/MacOS/MagicTouch8";
 			};
 			name = Release;
 		};
@@ -757,7 +757,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "tab_bar" */ = {
+		959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "MagicTouch8" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA00238C9E2C00B566D5 /* Debug */,
@@ -766,7 +766,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "tab_bar" */ = {
+		959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA03238C9E2C00B566D5 /* Debug */,
@@ -775,7 +775,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "tab_barTests" */ = {
+		959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA06238C9E2C00B566D5 /* Debug */,
@@ -784,7 +784,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "tab_barUITests" */ = {
+		959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8UITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA09238C9E2C00B566D5 /* Debug */,

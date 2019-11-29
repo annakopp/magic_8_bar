@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:tab_bar.xcodeproj">
+      location = "self:/Users/anna/Desktop/tab_bar/MagicTouch8.xcodeproj">
    </FileRef>
 </Workspace>
