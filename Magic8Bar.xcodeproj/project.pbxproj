@@ -3,13 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		9595ECB9238DE20800E99596 /* SecretSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9595ECB8238DE20800E99596 /* SecretSliderCell.swift */; };
-		9595ECF9238DF76D00E99596 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595ECE8238DF72400E99596 /* RxCocoa.framework */; };
-		9595ECFA238DF76D00E99596 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9595ECE6238DF72400E99596 /* RxSwift.framework */; };
 		959AC9E0238C9E2A00B566D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */; };
 		959AC9E2238C9E2A00B566D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9E1238C9E2A00B566D5 /* ViewController.swift */; };
 		959AC9E4238C9E2B00B566D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 959AC9E3238C9E2B00B566D5 /* Assets.xcassets */; };
@@ -17,79 +15,11 @@
 		959AC9F3238C9E2C00B566D5 /* tab_barTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9F2238C9E2C00B566D5 /* tab_barTests.swift */; };
 		959AC9FE238C9E2C00B566D5 /* tab_barUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959AC9FD238C9E2C00B566D5 /* tab_barUITests.swift */; };
 		959ACA0C238CAE5700B566D5 /* TouchBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959ACA0B238CAE5700B566D5 /* TouchBarController.swift */; };
+		95DBE89823E92C4B00F27ADB /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95DBE89723E92C4B00F27ADB /* RxSwift */; settings = {ATTRIBUTES = (Required, ); }; };
+		95DBE89A23E92C4B00F27ADB /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 95DBE89923E92C4B00F27ADB /* RxCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9595ECE5238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8A56AD71AD7424700B4673B;
-			remoteInfo = RxSwift;
-		};
-		9595ECE7238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C809396D1B8A71760088E94D;
-			remoteInfo = RxCocoa;
-		};
-		9595ECE9238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A2897D53225CA1E7004EA481;
-			remoteInfo = RxRelay;
-		};
-		9595ECEB238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8093BC71B8A71F00088E94D;
-			remoteInfo = RxBlocking;
-		};
-		9595ECED238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C88FA50C1C25C44800CCFEA4;
-			remoteInfo = RxTest;
-		};
-		9595ECEF238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C83508C31C386F6F0027C24C;
-			remoteInfo = "AllTests-iOS";
-		};
-		9595ECF1238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C83509841C38740E0027C24C;
-			remoteInfo = "AllTests-tvOS";
-		};
-		9595ECF3238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C83509941C38742C0027C24C;
-			remoteInfo = "AllTests-macOS";
-		};
-		9595ECF5238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C85BA04B1C3878740075D68E;
-			remoteInfo = Microoptimizations;
-		};
-		9595ECF7238DF72400E99596 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = C8E8BA551E2C181A00A4AC2C;
-			remoteInfo = Benchmarks;
-		};
 		959AC9EF238C9E2C00B566D5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 959AC9D4238C9E2A00B566D5 /* Project object */;
@@ -108,29 +38,17 @@
 
 /* Begin PBXFileReference section */
 		9595ECB8238DE20800E99596 /* SecretSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretSliderCell.swift; sourceTree = "<group>"; };
-		9595ECBB238DF12C00E99596 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/Mac/RxCocoa.framework; sourceTree = "<group>"; };
-		9595ECBC238DF12C00E99596 /* RxRelay.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxRelay.framework.dSYM; path = Carthage/Build/Mac/RxRelay.framework.dSYM; sourceTree = "<group>"; };
-		9595ECBD238DF12C00E99596 /* RxRelay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxRelay.framework; path = Carthage/Build/Mac/RxRelay.framework; sourceTree = "<group>"; };
-		9595ECBE238DF12C00E99596 /* RxCocoa.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxCocoa.framework.dSYM; path = Carthage/Build/Mac/RxCocoa.framework.dSYM; sourceTree = "<group>"; };
-		9595ECBF238DF12C00E99596 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/Mac/RxSwift.framework; sourceTree = "<group>"; };
-		9595ECC0238DF12C00E99596 /* RxBlocking.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxBlocking.framework.dSYM; path = Carthage/Build/Mac/RxBlocking.framework.dSYM; sourceTree = "<group>"; };
-		9595ECC1238DF12C00E99596 /* RxSwift.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxSwift.framework.dSYM; path = Carthage/Build/Mac/RxSwift.framework.dSYM; sourceTree = "<group>"; };
-		9595ECC2238DF12C00E99596 /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/Mac/RxBlocking.framework; sourceTree = "<group>"; };
-		9595ECC3238DF12C00E99596 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/Mac/RxTest.framework; sourceTree = "<group>"; };
-		9595ECC4238DF12C00E99596 /* RxTest.framework.dSYM */ = {isa = PBXFileReference; lastKnownFileType = wrapper.dsym; name = RxTest.framework.dSYM; path = Carthage/Build/Mac/RxTest.framework.dSYM; sourceTree = "<group>"; };
-		9595ECD0238DF18D00E99596 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
-		9595ECD8238DF72300E99596 /* Rx.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Rx.xcodeproj; path = RxSwift/Rx.xcodeproj; sourceTree = "<group>"; };
-		959AC9DC238C9E2A00B566D5 /* MagicTouch8.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTouch8.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AC9DC238C9E2A00B566D5 /* Magic8Bar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Magic8Bar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		959AC9E1238C9E2A00B566D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		959AC9E3238C9E2B00B566D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		959AC9E6238C9E2B00B566D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		959AC9E8238C9E2B00B566D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		959AC9E9238C9E2B00B566D5 /* tab_bar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = tab_bar.entitlements; sourceTree = "<group>"; };
-		959AC9EE238C9E2C00B566D5 /* MagicTouch8Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicTouch8Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AC9E9238C9E2B00B566D5 /* magic_8_bar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = magic_8_bar.entitlements; sourceTree = "<group>"; };
+		959AC9EE238C9E2C00B566D5 /* Magic8BarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Magic8BarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9F2238C9E2C00B566D5 /* tab_barTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_barTests.swift; sourceTree = "<group>"; };
 		959AC9F4238C9E2C00B566D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		959AC9F9238C9E2C00B566D5 /* MagicTouch8UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicTouch8UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		959AC9F9238C9E2C00B566D5 /* Magic8BarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Magic8BarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		959AC9FD238C9E2C00B566D5 /* tab_barUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_barUITests.swift; sourceTree = "<group>"; };
 		959AC9FF238C9E2C00B566D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		959ACA0B238CAE5700B566D5 /* TouchBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchBarController.swift; sourceTree = "<group>"; };
@@ -141,8 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9595ECF9238DF76D00E99596 /* RxCocoa.framework in Frameworks */,
-				9595ECFA238DF76D00E99596 /* RxSwift.framework in Frameworks */,
+				95DBE89823E92C4B00F27ADB /* RxSwift in Frameworks */,
+				95DBE89A23E92C4B00F27ADB /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,64 +81,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9595ECBA238DF12B00E99596 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				9595ECD8238DF72300E99596 /* Rx.xcodeproj */,
-				9595ECD0238DF18D00E99596 /* RxCocoa.framework */,
-				9595ECC2238DF12C00E99596 /* RxBlocking.framework */,
-				9595ECC0238DF12C00E99596 /* RxBlocking.framework.dSYM */,
-				9595ECBB238DF12C00E99596 /* RxCocoa.framework */,
-				9595ECBE238DF12C00E99596 /* RxCocoa.framework.dSYM */,
-				9595ECBD238DF12C00E99596 /* RxRelay.framework */,
-				9595ECBC238DF12C00E99596 /* RxRelay.framework.dSYM */,
-				9595ECBF238DF12C00E99596 /* RxSwift.framework */,
-				9595ECC1238DF12C00E99596 /* RxSwift.framework.dSYM */,
-				9595ECC3238DF12C00E99596 /* RxTest.framework */,
-				9595ECC4238DF12C00E99596 /* RxTest.framework.dSYM */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9595ECD9238DF72300E99596 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9595ECE6238DF72400E99596 /* RxSwift.framework */,
-				9595ECE8238DF72400E99596 /* RxCocoa.framework */,
-				9595ECEA238DF72400E99596 /* RxRelay.framework */,
-				9595ECEC238DF72400E99596 /* RxBlocking.framework */,
-				9595ECEE238DF72400E99596 /* RxTest.framework */,
-				9595ECF0238DF72400E99596 /* AllTests-iOS.xctest */,
-				9595ECF2238DF72400E99596 /* AllTests-tvOS.xctest */,
-				9595ECF4238DF72400E99596 /* AllTests-macOS.xctest */,
-				9595ECF6238DF72400E99596 /* PerformanceTests.app */,
-				9595ECF8238DF72400E99596 /* Benchmarks.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		959AC9D3238C9E2A00B566D5 = {
 			isa = PBXGroup;
 			children = (
-				959AC9DE238C9E2A00B566D5 /* magic_touch_8 */,
-				959AC9F1238C9E2C00B566D5 /* tab_barTests */,
-				959AC9FC238C9E2C00B566D5 /* tab_barUITests */,
+				959AC9DE238C9E2A00B566D5 /* Magic8Bar */,
+				959AC9F1238C9E2C00B566D5 /* Magic8BarTests */,
+				959AC9FC238C9E2C00B566D5 /* Magic8BarUITests */,
 				959AC9DD238C9E2A00B566D5 /* Products */,
-				9595ECBA238DF12B00E99596 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		959AC9DD238C9E2A00B566D5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				959AC9DC238C9E2A00B566D5 /* MagicTouch8.app */,
-				959AC9EE238C9E2C00B566D5 /* MagicTouch8Tests.xctest */,
-				959AC9F9238C9E2C00B566D5 /* MagicTouch8UITests.xctest */,
+				959AC9DC238C9E2A00B566D5 /* Magic8Bar.app */,
+				959AC9EE238C9E2C00B566D5 /* Magic8BarTests.xctest */,
+				959AC9F9238C9E2C00B566D5 /* Magic8BarUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		959AC9DE238C9E2A00B566D5 /* magic_touch_8 */ = {
+		959AC9DE238C9E2A00B566D5 /* Magic8Bar */ = {
 			isa = PBXGroup;
 			children = (
 				959AC9DF238C9E2A00B566D5 /* AppDelegate.swift */,
@@ -228,37 +109,37 @@
 				959AC9E3238C9E2B00B566D5 /* Assets.xcassets */,
 				959AC9E5238C9E2B00B566D5 /* Main.storyboard */,
 				959AC9E8238C9E2B00B566D5 /* Info.plist */,
-				959AC9E9238C9E2B00B566D5 /* tab_bar.entitlements */,
+				959AC9E9238C9E2B00B566D5 /* magic_8_bar.entitlements */,
 				959ACA0B238CAE5700B566D5 /* TouchBarController.swift */,
 				9595ECB8238DE20800E99596 /* SecretSliderCell.swift */,
 			);
-			path = magic_touch_8;
+			path = Magic8Bar;
 			sourceTree = "<group>";
 		};
-		959AC9F1238C9E2C00B566D5 /* tab_barTests */ = {
+		959AC9F1238C9E2C00B566D5 /* Magic8BarTests */ = {
 			isa = PBXGroup;
 			children = (
 				959AC9F2238C9E2C00B566D5 /* tab_barTests.swift */,
 				959AC9F4238C9E2C00B566D5 /* Info.plist */,
 			);
-			path = tab_barTests;
+			path = Magic8BarTests;
 			sourceTree = "<group>";
 		};
-		959AC9FC238C9E2C00B566D5 /* tab_barUITests */ = {
+		959AC9FC238C9E2C00B566D5 /* Magic8BarUITests */ = {
 			isa = PBXGroup;
 			children = (
 				959AC9FD238C9E2C00B566D5 /* tab_barUITests.swift */,
 				959AC9FF238C9E2C00B566D5 /* Info.plist */,
 			);
-			path = tab_barUITests;
+			path = Magic8BarUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		959AC9DB238C9E2A00B566D5 /* MagicTouch8 */ = {
+		959AC9DB238C9E2A00B566D5 /* Magic8Bar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8" */;
+			buildConfigurationList = 959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "Magic8Bar" */;
 			buildPhases = (
 				959AC9D8238C9E2A00B566D5 /* Sources */,
 				959AC9D9238C9E2A00B566D5 /* Frameworks */,
@@ -268,14 +149,18 @@
 			);
 			dependencies = (
 			);
-			name = MagicTouch8;
+			name = Magic8Bar;
+			packageProductDependencies = (
+				95DBE89723E92C4B00F27ADB /* RxSwift */,
+				95DBE89923E92C4B00F27ADB /* RxCocoa */,
+			);
 			productName = tab_bar;
-			productReference = 959AC9DC238C9E2A00B566D5 /* MagicTouch8.app */;
+			productReference = 959AC9DC238C9E2A00B566D5 /* Magic8Bar.app */;
 			productType = "com.apple.product-type.application";
 		};
-		959AC9ED238C9E2C00B566D5 /* MagicTouch8Tests */ = {
+		959AC9ED238C9E2C00B566D5 /* Magic8BarTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8Tests" */;
+			buildConfigurationList = 959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "Magic8BarTests" */;
 			buildPhases = (
 				959AC9EA238C9E2C00B566D5 /* Sources */,
 				959AC9EB238C9E2C00B566D5 /* Frameworks */,
@@ -286,14 +171,14 @@
 			dependencies = (
 				959AC9F0238C9E2C00B566D5 /* PBXTargetDependency */,
 			);
-			name = MagicTouch8Tests;
+			name = Magic8BarTests;
 			productName = tab_barTests;
-			productReference = 959AC9EE238C9E2C00B566D5 /* MagicTouch8Tests.xctest */;
+			productReference = 959AC9EE238C9E2C00B566D5 /* Magic8BarTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		959AC9F8238C9E2C00B566D5 /* MagicTouch8UITests */ = {
+		959AC9F8238C9E2C00B566D5 /* Magic8BarUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8UITests" */;
+			buildConfigurationList = 959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "Magic8BarUITests" */;
 			buildPhases = (
 				959AC9F5238C9E2C00B566D5 /* Sources */,
 				959AC9F6238C9E2C00B566D5 /* Frameworks */,
@@ -304,9 +189,9 @@
 			dependencies = (
 				959AC9FB238C9E2C00B566D5 /* PBXTargetDependency */,
 			);
-			name = MagicTouch8UITests;
+			name = Magic8BarUITests;
 			productName = tab_barUITests;
-			productReference = 959AC9F9238C9E2C00B566D5 /* MagicTouch8UITests.xctest */;
+			productReference = 959AC9F9238C9E2C00B566D5 /* Magic8BarUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -332,7 +217,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "MagicTouch8" */;
+			buildConfigurationList = 959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "Magic8Bar" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -341,96 +226,19 @@
 				Base,
 			);
 			mainGroup = 959AC9D3238C9E2A00B566D5;
+			packageReferences = (
+				95DBE89623E92C4B00F27ADB /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 959AC9DD238C9E2A00B566D5 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 9595ECD9238DF72300E99596 /* Products */;
-					ProjectRef = 9595ECD8238DF72300E99596 /* Rx.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
-				959AC9DB238C9E2A00B566D5 /* MagicTouch8 */,
-				959AC9ED238C9E2C00B566D5 /* MagicTouch8Tests */,
-				959AC9F8238C9E2C00B566D5 /* MagicTouch8UITests */,
+				959AC9DB238C9E2A00B566D5 /* Magic8Bar */,
+				959AC9ED238C9E2C00B566D5 /* Magic8BarTests */,
+				959AC9F8238C9E2C00B566D5 /* Magic8BarUITests */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		9595ECE6238DF72400E99596 /* RxSwift.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxSwift.framework;
-			remoteRef = 9595ECE5238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECE8238DF72400E99596 /* RxCocoa.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxCocoa.framework;
-			remoteRef = 9595ECE7238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECEA238DF72400E99596 /* RxRelay.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxRelay.framework;
-			remoteRef = 9595ECE9238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECEC238DF72400E99596 /* RxBlocking.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxBlocking.framework;
-			remoteRef = 9595ECEB238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECEE238DF72400E99596 /* RxTest.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = RxTest.framework;
-			remoteRef = 9595ECED238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECF0238DF72400E99596 /* AllTests-iOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AllTests-iOS.xctest";
-			remoteRef = 9595ECEF238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECF2238DF72400E99596 /* AllTests-tvOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AllTests-tvOS.xctest";
-			remoteRef = 9595ECF1238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECF4238DF72400E99596 /* AllTests-macOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "AllTests-macOS.xctest";
-			remoteRef = 9595ECF3238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECF6238DF72400E99596 /* PerformanceTests.app */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.application;
-			name = PerformanceTests.app;
-			path = Microoptimizations.app;
-			remoteRef = 9595ECF5238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9595ECF8238DF72400E99596 /* Benchmarks.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = Benchmarks.xctest;
-			remoteRef = 9595ECF7238DF72400E99596 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		959AC9DA238C9E2A00B566D5 /* Resources */ = {
@@ -491,12 +299,12 @@
 /* Begin PBXTargetDependency section */
 		959AC9F0238C9E2C00B566D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 959AC9DB238C9E2A00B566D5 /* MagicTouch8 */;
+			target = 959AC9DB238C9E2A00B566D5 /* Magic8Bar */;
 			targetProxy = 959AC9EF238C9E2C00B566D5 /* PBXContainerItemProxy */;
 		};
 		959AC9FB238C9E2C00B566D5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 959AC9DB238C9E2A00B566D5 /* MagicTouch8 */;
+			target = 959AC9DB238C9E2A00B566D5 /* Magic8Bar */;
 			targetProxy = 959AC9FA238C9E2C00B566D5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -641,12 +449,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = magic_touch_8/Info.plist;
+				INFOPLIST_FILE = Magic8Bar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.magic-touch-8";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.magic-8-bar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -665,12 +473,12 @@
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = magic_touch_8/Info.plist;
+				INFOPLIST_FILE = Magic8Bar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.magic-touch-8";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.magic-8-bar";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -693,7 +501,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.tab-barTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicTouch8.app/Contents/MacOS/MagicTouch8";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic8Bar.app/Contents/MacOS/Magic8Bar";
 			};
 			name = Debug;
 		};
@@ -714,7 +522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.anna.tab-barTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicTouch8.app/Contents/MacOS/MagicTouch8";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Magic8Bar.app/Contents/MacOS/Magic8Bar";
 			};
 			name = Release;
 		};
@@ -759,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "MagicTouch8" */ = {
+		959AC9D7238C9E2A00B566D5 /* Build configuration list for PBXProject "Magic8Bar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA00238C9E2C00B566D5 /* Debug */,
@@ -768,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8" */ = {
+		959ACA02238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "Magic8Bar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA03238C9E2C00B566D5 /* Debug */,
@@ -777,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8Tests" */ = {
+		959ACA05238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "Magic8BarTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA06238C9E2C00B566D5 /* Debug */,
@@ -786,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "MagicTouch8UITests" */ = {
+		959ACA08238C9E2C00B566D5 /* Build configuration list for PBXNativeTarget "Magic8BarUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				959ACA09238C9E2C00B566D5 /* Debug */,
@@ -796,6 +604,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		95DBE89623E92C4B00F27ADB /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		95DBE89723E92C4B00F27ADB /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95DBE89623E92C4B00F27ADB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		95DBE89923E92C4B00F27ADB /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 95DBE89623E92C4B00F27ADB /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 959AC9D4238C9E2A00B566D5 /* Project object */;
 }
